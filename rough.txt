@@ -1,0 +1,13 @@
+Microservice 1
+https://github.com/i27devopsb5/i27-eureka.git
+
+https://github.com/i27devopsb5/i27-users.git
+
+
+https://github.com/i27devopsb5/i27-product.git
+
+
+https://github.com/i27devopsb5/i27-clothing.git
+
+https://github.com/i27devopsb5/i27-iac.git
+
