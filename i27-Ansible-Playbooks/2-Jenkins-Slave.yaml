@@ -58,5 +58,23 @@
       owner: "{{ user_name }}"
       group: "{{ user_name }}"
       recurse: true # Ensure Ownership is appllied recursively.
+  - name: Update apt package cache
+    apt:
+      update_cache: yes 
+    # Installing docker on Slave macine
+  - name: Install Docker 
+    apt:
+      name: docker.io
+      state: present
+  - name: Add user '{{ user_name }}' to the docker group
+    ansible.builtin.user: 
+      name: "{{ user_name }}"
+      groups: docker
+      append: yes
+  - name: Set Permissions on /var/run/docker.sock
+    file:
+      path: /var/run/docker.sock 
+      mode: '0777'
+
 
 # there are lot to be installed, so this will be continued.........
